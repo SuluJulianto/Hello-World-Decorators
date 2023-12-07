@@ -1,43 +1,23 @@
-# Multilingual Greetings
+## Multilingual Greetings with Decorative Display
 
-This Python program is designed to create greetings in various languages with added visual appeal through decorative symbols. Each time the program runs, it displays greetings in different languages accompanied by randomly chosen symbols.
+This Python script generates multilingual greetings with decorative patterns. Let's dive into the breakdown of its structure and functionalities:
 
-## How it Works
+### Initialization
 
-### Language List and Greetings
+- `decor_symbols`: Contains a set of decorative symbols used to embellish the greetings.
+- `languages`: Consists of the names of various languages.
+- `greetings`: Stores greeting messages in multiple languages.
 
-The program operates with two main lists:
+### Functions
 
-languages = ["English", "Indonesian", "Japanese", ...]
-greetings = ["Hello World", "Halo Dunia", "Ohayō Sekai", ...]
-These lists store the names of languages and their respective greetings.
+- `random_number(limit)`: Generates a random number between 0 and `limit-1`.
+- `decorate(func, lang, index, index2, spacing)`: A decorator function that decorates greetings with patterns. It uses the `decor_symbols` to create visual patterns around the greetings.
+- `display_text(spaces, idx)`: Prints a greeting message from the `greetings` list with a specified number of spaces before it.
 
-Decorative Symbols
-Another list is used to store decorative symbols:
+### Execution
 
-decor_symbols = ["=", "^", ":", "~", "*", "+", "_", "<", ">", "'"]
-These symbols are utilized to embellish the displayed greetings.
+The script iterates through the `languages` list, applying a randomly selected decorative symbol from `decor_symbols` to each language's greeting using the `decorate` decorator function. The greetings are printed with decorative patterns, creating an aesthetically appealing output.
 
-Functions
-random_number()
-This function generates a random number within a given range.
+### Enhancements
 
-decorate()
-The decorate() function decorates greetings in a specific language with random symbols. It takes parameters such as the language, symbol index, and spacing.
-
-display_text()
-This function displays greetings in a chosen language at a designated position.
-
-Utilization of Functions and Looping
-A loop iterates through each language in the languages list. Within this loop:
-
-for i in range(len(languages)):
-    # Code to display decorated greetings
-    # ...
-The program generates a random symbol index and determines spacing based on the language index. It then displays the greeting of that language adorned with the chosen symbol and spacing.
-
-Usage
-Ensure Python is installed on your system. Copy the provided code into a Python file and execute it using a terminal or Python IDE. Each run showcases greetings in different languages, each adorned uniquely with randomly chosen symbols.
-
-Enhanced Explanation
-This program offers a delightful exploration of multilingual greetings, enhancing the experience with visually appealing decorations. It invites users to discover diverse languages and cultures through a unique visual display. Each greeting exemplifies the richness and diversity of our world's linguistic landscape.
+Consider adding comments throughout the code to explain individual sections or functions in more detail. This can enhance readability and help others understand the code's functionality more easily. Additionally, providing examples or use cases showcasing the script's output could be beneficial.
